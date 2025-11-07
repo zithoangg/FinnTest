@@ -1,0 +1,95 @@
+/* Reset default spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: none;
+}
+
+#ConnectionTimeout .ErrorIcon {
+  background: url(Images/new/Image_ConnectionTimeout.svg) no-repeat;
+  width: 178px;
+  height: 178px;
+  margin: 1.5em auto 1em;
+  border-radius: 50%;
+  border: 8px solid #2b9cdc;
+  margin-top: 10%;
+  min-height: 178px;
+}
+
+#ConnectionTimeout .ErrorTitle,
+#ConnectionTimeout .DecribeTitle {
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  line-height: 1.6;
+  font-family: Microsoft JhengHei, arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+#ConnectionTimeout .ErrorTitle {
+  text-shadow: 0 1px 5px #2e80af;
+  margin: 0 auto;
+  font-size: 1.25em;
+}
+
+#ConnectionTimeout .DecribeTitle {
+  margin: 10px 0 1.5em 0;
+  font-size: 1em;
+}
+
+#ConnectionTimeout .DecribeText {
+  padding: 0.5em 0.5em 0.8em 0.5em;
+  box-sizing: border-box;
+  color: #fff;
+  font: 1em Microsoft JhengHei, arial, sans-serif;
+}
+
+#ConnectionTimeout ol {
+  max-width: 300px;
+  margin: 0 auto 1em auto;
+}
+
+#ConnectionTimeout .RetryBtn {
+  padding: 0.6em 0.9em;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  width: 90px;
+  box-shadow: 0 2px 5px 0 #15858a;
+  font: 1.2em Microsoft JhengHei, arial, sans-serif;
+  font-weight: bold;
+  color: #32a5e5;
+  transition: all 0.2s ease-in-out;
+}
+
+#ConnectionTimeout .RetryBtn:active {
+  box-shadow: -1px 1px 16px 1px #15858a;
+}
+
+#ConnectionTimeout .RetryBtnIcon {
+  transform: scale(0.7) translateY(-10px);
+  float: left;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background: url(Images/new/MPS_btn_UserInfo.svg) no-repeat;
+  background-position: -355px -105px;
+}
+
+#ConnectionTimeout .RetryText {
+  display: inline-block;
+  vertical-align: 5px;
+}
+
+.BGgradient {
+  background: linear-gradient(to bottom, #32a6e6, #17c7c5);
+  position: fixed;     /* ✅ 固定填滿視窗 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: -1;         /* 讓內容蓋在上面 */
+}
