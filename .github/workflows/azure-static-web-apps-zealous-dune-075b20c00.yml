@@ -30,9 +30,16 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_DUNE_075B20C00 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/"     # If your files live in a subfolder, change to that folder name
-          api_location: ""      # Not using SWA-managed Functions
-          output_location: ""   # No build output for pure static content
+
+          # Paths for your repo layout:
+          app_location: "/"         # change if your files live in a subfolder
+          output_location: ""       # no build output for pure static content
+          api_location: ""          # not using SWA-managed Functions
+          data_api_location: ""     # explicitly disable DB Connections probing
+
+          # Optional: if your production branch differs
+          # production_branch: "main"
+          # deployment_environment: "production"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -43,4 +50,3 @@ jobs:
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
-          action: "close"
